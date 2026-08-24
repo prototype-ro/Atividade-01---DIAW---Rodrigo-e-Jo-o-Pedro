@@ -20,6 +20,9 @@ public class OpenMeteoService {
     }
 
     public String getWeatherByLatitude(String latitude, String longitude){
-        return searchEndpoint("https://api.open-meteo.com/v1/forecast?latitude="+latitude+"&longitude="+longitude);
+        return searchEndpoint("https://api.open-meteo.com/v1/forecast?latitude="+latitude
+                +"&longitude="+longitude
+                +"&current=temperature_2m,relative_humidity_2m,apparent_temperature"
+                +"&timezone=America/Sao_Paulo");
     }
 }
